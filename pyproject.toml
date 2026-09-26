@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cleanroom-probe"
+version = "0.1.0"
+description = "Non-destructive detection of hidden workspace files that influence a command."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ismeet Pandey"}]
+
+[project.scripts]
+cleanroom = "cleanroom.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cleanroom*"]
